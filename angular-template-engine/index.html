@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular templating engine</title>
+
+    <!--<style>-->
+        <!--.ng-invalid{-->
+            <!--border: 1px solid red;-->
+        <!--}-->
+    <!--</style>-->
+</head>
+<body ng-app="AppModule">
+
+    <div ng-controller="MainCtrl as ctrl">
+        <div ng-include="'src/templates/main.template.html'">
+        </div>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="src/app.module.js"></script>
+    <script src="src/controllers/main.controller.js"></script>
+</body>
+</html>

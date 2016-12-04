@@ -1,0 +1,66 @@
+<!--
+Template for the main controller
+-->
+
+<h2>
+    Interpolation
+</h2>
+
+
+{{ 10 * 5}}
+
+<br/>
+
+{{ctrl.greeting}}
+
+<br/>
+
+{{ctrl.sayHello()}}
+
+<h2>
+    Binding
+</h2>
+
+<form ng-submit="ctrl.bindingExampleFunc()">
+    <input type="text" ng-model="ctrl.bindingExample" />
+
+</form>
+
+<h2>
+    Validation
+</h2>
+
+<form >
+    <input type="email"
+           placeholder="Type your email..."
+           ng-model="ctrl.emailInput"
+           minlength="5"
+           required />
+</form>
+
+<h4>
+    FormController/NgModelController
+</h4>
+<form name="myFormController" novalidate>
+    <input type="email"
+           name="myEmail"
+           ng-model="ngModelControllerDemo"
+           required
+           minlength="5"
+           maxlength="50" />
+    <div ng-if="myFormController.myEmail.$invalid">
+        <div ng-if="myFormController.myEmail.$error.required">
+            This field is required
+        </div>
+        <div ng-if="myFormController.myEmail.$error.minlength">
+            there is a minlength of 5
+        </div>
+        <div ng-if="myFormController.myEmail.$error.email">
+            Invalid email
+        </div>
+    </div>
+    <button
+            ng-disabled="myFormController.$invalid"
+            type="submit">Submit</button>
+</form>
+
