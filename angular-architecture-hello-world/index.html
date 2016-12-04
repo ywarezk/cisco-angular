@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+
+</head>
+<body ng-app="HelloWorld">
+    <div ng-controller="HelloWorldCtrl as helloWorldCtrl">
+        <div ng-include="'src/templates/hello-world.template.html'"></div>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="src/app.module.js"></script>
+    <script src="src/controllers/hello-world.controller.js"></script>
+    <script src="src/services/greeting.service.js"></script>
+</body>
+</html>

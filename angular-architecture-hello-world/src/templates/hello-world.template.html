@@ -1,0 +1,16 @@
+<!--
+hello world controller template
+-->
+
+<form ng-submit="helloWorldCtrl.submitForm()">
+    <label>
+        Greetings
+    </label>
+    <input type="text" ng-model="helloWorldCtrl.greetingInput" />
+</form>
+
+<ul>
+    <li ng-repeat="greeting in helloWorldCtrl.greetings">
+        {{greeting}}
+    </li>
+</ul>
