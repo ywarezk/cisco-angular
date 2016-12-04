@@ -64,3 +64,101 @@ Template for the main controller
             type="submit">Submit</button>
 </form>
 
+<h2>
+    Events
+</h2>
+
+<p ng-click="ctrl.count=ctrl.count + 1" ng-init="ctrl.count=0">
+    {{ctrl.count}}
+</p>
+
+<button ng-click="ctrl.alertClicked($event)">
+    Alert
+</button>
+
+<input ng-model="ctrl.ngChangeDemo" ng-change="ctrl.count = ctrl.count + 1" />
+
+<h5 ng-mouseover="ctrl.mouseOverExample()">
+    Hover over me
+</h5>
+
+<h2>
+    DOM manipulation
+</h2>
+
+<div ng-if="ctrl.count > 0">
+    Show div
+</div>
+
+<div ng-show="ctrl.count == 0">
+    ngShow
+</div>
+
+
+<form ng-submit="ctrl.groceryList.push(ctrl.addGroceryInput)">
+    <input ng-model="ctrl.addGroceryInput" />
+</form>
+
+<ul>
+    <li ng-repeat="item in ctrl.groceryList">
+        {{$index}} {{item}}
+    </li>
+</ul>
+
+<ul>
+    <li ng-repeat="(key, value) in ctrl.groceryObj">
+        {{key}} {{value}}
+    </li>
+</ul>
+
+<h2>
+    Changing appearance
+</h2>
+
+<h3>
+    NgClass
+</h3>
+
+<div ng-class="ctrl.classObj">
+    Changing style
+</div>
+<form>
+    <input ng-model="ctrl.changingClassInput" />
+    <input
+            ng-change="ctrl.debug()"
+            type="checkbox"
+            ng-model="ctrl.toggleMe" />
+    <button ng-click="ctrl.classObj['bg-orange']=!ctrl.classObj['bg-orange']">
+        Toggle
+    </button>
+</form>
+
+<h3>
+    NgStyle
+</h3>
+
+<div ng-style="{'background-color': ctrl.changingClassInput}">
+    ngStyle
+</div>
+
+<h2>
+    Filtering
+</h2>
+
+{{ctrl.classObj | json}}
+
+<br/>
+
+{{ctrl.today}}
+<br/>
+{{ctrl.today | date:'dd/MM/yyyy'}}
+
+
+<input ng-model="ctrl.searchInput" />
+<ul>
+    <li ng-repeat="item in (ctrl.groceryList | filter:ctrl.searchInput)">
+        {{item}}
+    </li>
+</ul>
+
+{{ctrl.searchInput | zigzag}}
