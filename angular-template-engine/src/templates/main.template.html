@@ -119,14 +119,16 @@ Template for the main controller
     NgClass
 </h3>
 
-<div ng-class="ctrl.classObj">
+<div ng-class="ctrl.classObj" ng-init="ctrl.classObj={'bg-orange': ctrl.toggleMe, 'bg-blue': !ctrl.toggleMe}">
     Changing style
 </div>
 <form>
     <input ng-model="ctrl.changingClassInput" />
     <input
-            ng-change="ctrl.debug()"
+            ng-change="ctrl.classObj={'bg-orange': ctrl.toggleMe, 'bg-blue': !ctrl.toggleMe}"
             type="checkbox"
+            ng-true-value="true"
+            ng-false-value="false"
             ng-model="ctrl.toggleMe" />
     <button ng-click="ctrl.classObj['bg-orange']=!ctrl.classObj['bg-orange']">
         Toggle

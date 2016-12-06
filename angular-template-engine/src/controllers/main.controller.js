@@ -45,6 +45,7 @@ angular.module('AppModule')
 
             self.toggleMe = true;
             self.debug = function debug(){
+                console.log(self.toggleMe);
             }
 
             self.classObj = {'bg-orange': self.toggleMe, 'bg-blue': !self.toggleMe}

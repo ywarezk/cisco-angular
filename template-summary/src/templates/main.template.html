@@ -1,0 +1,44 @@
+
+
+<h1>{{ctrl.greeting}}</h1>
+
+<h2>
+    events
+</h2>
+
+<button ng-click="ctrl.popAlert()">
+    alert
+</button>
+
+<h2>
+    binding
+</h2>
+
+<input ng-model="ctrl.bindingExample" />
+
+<h2>
+    Form validation
+</h2>
+<form name="myForm">
+    <input required name="username" ng-model="ctrl.username" />
+    {{myForm.username.$valid}}
+    {{myForm.$valid}}
+</form>
+
+<h2>
+    Dom manipulation
+</h2>
+
+<div ng-if="ctrl.bindingExample === 'hello'">
+    Hello is printed
+</div>
+
+<div ng-repeat="pokemon in ctrl.pokemonArray">
+    <p>{{pokemon}}</p>
+</div>
+
+<h2>
+    Filters
+</h2>
+
+{{data | filter:arg1}}

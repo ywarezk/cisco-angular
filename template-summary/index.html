@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template Summary</title>
+</head>
+<body ng-app="TemplateSummary">
+
+    <div ng-controller="MainController as ctrl">
+        <div ng-include="'src/templates/main.template.html'"></div>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="src/app.module.js"></script>
+    <script src="src/controllers/main.controller.js"></script>
+    <script src="src/services/hello-world.service.js"></script>
+</body>
+</html>
