@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template Summary</title>
+</head>
+<body ng-app="ServicesDemo">
+
+    <div ng-controller="MainController as ctrl">
+        <div ng-include="'src/templates/main.template.html'"></div>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="src/app.module.js"></script>
+    <script src="src/controllers/main.controller.js"></script>
+    <script src="src/services/server-url.value.js"></script>
+    <script src="src/services/pokemon.factory.js"></script>
+    <script src="src/services/pokemon.service.js"></script>
+    <script src="src/services/Task/Task.js"></script>
+    <script src="src/services/Task/task.service.js"></script>
+</body>
+</html>

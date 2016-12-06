@@ -1,0 +1,39 @@
+<h1>
+    Angular Services
+</h1>
+
+<h2>
+    Value
+</h2>
+
+<p>
+    {{ctrl.greeting}}
+</p>
+
+<h2>
+    Factory
+</h2>
+
+<p>
+    {{ctrl.pikachuName}}
+</p>
+
+<h2>
+    Service
+</h2>
+
+<ul>
+    <li ng-repeat="pokemon in ctrl.pokemonArray">
+        {{pokemon.name}}
+    </li>
+</ul>
+
+<h2>
+    Task Service
+</h2>
+
+<ul>
+    <li ng-repeat="task in ctrl.tasks">
+        {{task.getTitle()}}
+    </li>
+</ul>

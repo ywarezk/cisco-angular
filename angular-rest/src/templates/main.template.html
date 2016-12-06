@@ -1,0 +1,14 @@
+<h1>
+    Angular Rest
+</h1>
+
+<button ng-click="ctrl.createTask();">
+    Create Task
+</button>
+
+<ul>
+    <li ng-repeat="task in ctrl.tasks">
+        {{task.getTitle()}}
+    </li>
+</ul>
+
