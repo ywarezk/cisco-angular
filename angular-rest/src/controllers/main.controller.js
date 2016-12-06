@@ -8,11 +8,11 @@ angular.module('RestDemo')
 
         self.greeting = 'hello world';
 
-        taskService.getTasks().then(function(tasks){
-            self.tasks = tasks;
-        }, function(err){
-            alert('error');
-        });
+        // taskService.getTasks().then(function(tasks){
+        //     self.tasks = tasks;
+        // }, function(err){
+        //     alert('error');
+        // });
 
         self.createTask = function createTask(){
             taskService.createTask(new Task({
@@ -22,6 +22,8 @@ angular.module('RestDemo')
                 when: (new Date()).toISOString()
             }));
         }
+
+        self.tasks = taskService.getTasks2();
 
 
     }]);
