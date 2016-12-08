@@ -1,0 +1,25 @@
+<h1>
+    Tasks
+</h1>
+
+<button ng-click="ctrl.goToPokemonPage();">
+    Go Pokemon!
+</button>
+
+
+<form>
+    <label>
+        Search
+    </label>
+    <input
+            name="search"
+            type="text"
+            ng-model="ctrl.searchInput"
+            ng-change="ctrl.searchList()" />
+</form>
+
+<ul>
+    <li ng-repeat="task in ctrl.filteredTasks">
+        {{task.getTitle()}}
+    </li>
+</ul>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="AppModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Services & Rest summary</title>
+
+    <base href="/" />
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a ui-sref="parent.home">Home</a>
+            </li>
+            <li>
+                <a ui-sref="parent.pokemon({id: 5, power: 100, name: 'pikachu'})">Pikachu</a>
+            </li>
+            <li>
+                <a ui-sref="parent.pokemon({id: 10, power: 50, name: 'squirtle'})">Squirtle</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div ui-view>
+
+    </div>
+
+    <script src="assets/bower_components/lodash/dist/lodash.js"></script>
+
+    <script src="assets/bower_components/angular/angular.js"></script>
+    <script src="assets/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="assets/bower_components/restangular/dist/restangular.js"></script>
+    <script src="assets/src/app.module.js"></script>
+    <script src="assets/src/controllers/main.controller.js"></script>
+    <script src="assets/src/services/Task/task.js"></script>
+    <script src="assets/src/services/Task/task.service.js"></script>
+    <script src="assets/src/app.routes.js"></script>
+    <script src="assets/src/controllers/pokemon.controller.js"></script>
+    <script src="assets/src/controllers/parent.controller.js"></script>
+
+</body>
+</html>

@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="AppModule">
 <head>
     <meta charset="UTF-8">
     <title>Services & Rest summary</title>
 </head>
-<body>
+<body ng-controller="MainController as ctrl">
+
+
+    <div ng-include="'src/templates/main.template.html'">
+    </div>
 
 
 
+    <script src="bower_components/lodash/dist/lodash.js"></script>
 
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/restangular/dist/restangular.js"></script>
+    <script src="src/app.module.js"></script>
+    <script src="src/controllers/main.controller.js"></script>
+    <script src="src/services/Task/task.js"></script>
+    <script src="src/services/Task/task.service.js"></script>
 
 </body>
 </html>
