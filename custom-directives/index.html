@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+
+</head>
+<body ng-app="DirectivesExample">
+
+    <div ng-controller="MainController">
+        <nz-hello-world style="background-color: orange; display: block;" greeting-parent="greeting" my-alert-method="sayHello()">
+
+            <ul>
+                <li ng-repeat="item in groceryList">
+                    {{item}}
+                </li>
+            </ul>
+
+        </nz-hello-world>
+    </div>
+
+
+
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="src/app.module.js"></script>
+    <script src="src/directives/hello-world.directive.js"></script>
+    <script src="src/controllers/main.controller.js"></script>
+</body>
+</html>
