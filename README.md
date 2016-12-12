@@ -176,10 +176,14 @@ You task involves the following:
 - install the Restangular module
 - define 2 routes in your app one for the homepage and one for a task page
 - in the homepage create a controller and a template
-- the homepage route should have a resolve
+- the homepage route should have a resolve that will load when the tasks return from the server
 - create 2 directives one for creating or modifying a task which will be a form with the inputs of a task
 and also an optional input of id, if the id is present the form will send a request to update the task if not the form will create
 a new task. Make sure you have a validation in the form
 - the second directive will display the list of tasks with their title and description and a delete button.
+- when clicking a task it will move to the route of the task page.
+- the task page will have a resolve and the page is loaded when the task is grabbed from the server
+- the task page will display all the details of the task
+
 
 - Create another route for you url that
