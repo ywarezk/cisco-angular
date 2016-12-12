@@ -159,3 +159,27 @@ The files in this demo are located at the folder **angular-routing**
 
 In this lesson we will learn how to create components in angular using Directives, the files in this demo are located at 
 the folder **angular-directives**
+
+## Day 4
+
+#### Angular Summary Exercise
+
+In this lesson we will create a final exercise summarizing Angular material that we covered. 
+The task solution is located at the folder **summary-task**
+In the following task you will have to create a todo application with two screens: 
+- The first screen will have two components, one to create or modify a task and one to display the list of tasks
+- The second screen will have a single task details.
+
+You task involves the following:
+- Create a new angular application
+- install the ui.router module
+- install the Restangular module
+- define 2 routes in your app one for the homepage and one for a task page
+- in the homepage create a controller and a template
+- the homepage route should have a resolve
+- create 2 directives one for creating or modifying a task which will be a form with the inputs of a task
+and also an optional input of id, if the id is present the form will send a request to update the task if not the form will create
+a new task. Make sure you have a validation in the form
+- the second directive will display the list of tasks with their title and description and a delete button.
+
+- Create another route for you url that
