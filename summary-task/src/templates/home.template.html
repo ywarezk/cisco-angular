@@ -1,0 +1,22 @@
+<!--
+Template for the HomeController
+-->
+
+<a ui-sref="task({id: 20})">task page</a>
+
+<h1>
+    {{ctrl.greeting}}
+</h1>
+
+
+<nz-task-form></nz-task-form>
+
+<ul>
+    <li ng-repeat="task in ctrl.tasks">
+        <a ui-sref="task({id: task.getId()})">
+            {{task.getTitle()}}
+        </a>
+    </li>
+</ul>
+
+

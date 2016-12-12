@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="AppModule">
 <head>
     <meta charset="UTF-8">
     <title>Summary Task</title>
+    <base href="/" />
 </head>
 <body>
 
+    <ui-view></ui-view>
+
+    <script src="bower_components/lodash/dist/lodash.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/restangular/dist/restangular.js"></script>
+    <script src="src/app.module.js"></script>
+    <script src="src/app.routes.js"></script>
+    <script src="src/controllers/home.controller.js"></script>
+    <script src="src/controllers/task.controller.js"></script>
+    <script src="src/services/Task/Task.js"></script>
+    <script src="src/services/Task/task.service.js"></script>
+    <script src="src/directives/TaskForm/task-form.directive.js"></script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<form name="createTask" ng-submit="createTask();" novalidate>
+    <div>
+        <label>id</label>
+        <input type="number" name="id" ng-model="id" />
+    </div>
+    <div>
+        <label>title</label>
+        <input
+                type="text"
+                name="title"
+                ng-model="title"
+                required
+                minlength="5"
+                pattern="[a-zA-Z]+" />
+    </div>
+    <div>
+        <label>description</label>
+        <input
+                type="text"
+                name="description"
+                ng-model="description"
+                required
+                minlength="5"
+                 />
+    </div>
+    <div>
+        <label>group</label>
+        <input
+                type="text"
+                name="group"
+                ng-model="group"
+                required
+                minlength="5"
+                 />
+    </div>
+    <div>
+        <label>when</label>
+        <input
+                type="date"
+                name="when"
+                ng-model="when"
+                 />
+    </div>
+    <div>
+        <button type="submit" ng-disabled="createTask.$invalid">
+            Submit
+        </button>
+    </div>
+</form>
